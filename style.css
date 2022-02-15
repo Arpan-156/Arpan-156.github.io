@@ -152,7 +152,7 @@ section .title::after{
 /* home section styling */
 .home{
     display: flex;
-    background: url("/images/Untitled\ design.jpg") no-repeat center;
+    background: url("https://raw.githubusercontent.com/Arpan-156/MyWebsite/main/images/Untitled%20design.jpg") no-repeat center;
     height: 100vh;
     color: #fff;
     min-height: 500px;
