@@ -1,6 +1,3 @@
-/*  import google fonts */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
-
 *{
     margin: 0;
     padding: 0;
@@ -291,6 +288,9 @@ section .title::after{
     font-size: 25px;
     font-weight: 500;
     margin: 10px 0 7px 0;
+}
+a{
+  color: #f0f0f0;
 }
 
 /* skills section styling */
@@ -1100,133 +1100,4 @@ footer span a:hover{
 
 
 
-  /* .a ul {
-    position:absolute;
-    top:80%;
-    left:30%;
-    transform:translate(-50%, -50%);
-    display:flex;
-    margin:0;
-    padding: 10px;
-  }
-  
-  .a ul li {
-    list-style:none;
-    margin:0 5px;
-  }
-  
-  .a ul li a .fa {
-    font-size: 40px;
-    color: #262626;
-    line-height:80px;
-    transition: .5s;
-    padding-right: 14px;
-  }
-  
-  .a ul li a span {
-    padding:0;
-    margin:0;
-    position:absolute;
-    top: 30px;
-    color: #262626;
-    letter-spacing: 4px;
-    transition: .5s;
-  }
-  
-  .a ul li a {
-    text-decoration: none;
-    display:absolute;
-    display:block;
-    width:195px;
-    height:70px;
-    background: rgb(146, 140, 140);
-    text-align:left;
-    padding-left: 20px;
-    transform: rotate(-30deg) skew(25deg) translate(0,0);
-    transition:.5s;
-    box-shadow: -20px 20px 10px rgba(0,0,0,.5);
-  }
-  .a ul li a:before {
-    content: '';
-    position: absolute;
-    top:10px;
-    left:-20px;
-    height:100%;
-    width:20px;
-    background: #b1b1b1;
-    transform: .5s;
-    transform: rotate(0deg) skewY(-45deg);
-  }
-  .a ul li a:after {
-    content: '';
-    position: absolute;
-    bottom:-20px;
-    left:-10px;
-    height:20px;
-    width:100%;
-    background: #b1b1b1;
-    transform: .5s;
-    transform: rotate(0deg) skewX(-45deg);
-  }
-  
-  .a ul li a:hover {
-    transform: rotate(-30deg) skew(25deg) translate(20px,-15px);
-    box-shadow: -50px 50px 50px rgba(0,0,0,.5);
-  }
-  
-  .a ul li:hover .fa {
-    color:#fff;
-  }
-  
-  .a ul li:hover span {
-    color:#fff;
-  }
-  
-  .a ul li:hover:nth-child(1) a{
-    background: #3b5998;
-  }
-  .a ul li:hover:nth-child(1) a:before{
-    background: #365492;
-  }
-  .a ul li:hover:nth-child(1) a:after{
-    background: #4a69ad;
-  }
-  
-  .a ul li:hover:nth-child(2) a{
-    background: #00aced;
-  }
-  .a ul li:hover:nth-child(2) a:before{
-    background: #097aa5;
-  }
-  .a ul li:hover:nth-child(2) a:after{
-    background: #53b9e0;
-  }
-  
-  .a ul li:hover:nth-child(3) a{
-    background: #dd4b39;
-  }
-  .a ul li:hover:nth-child(3) a:before{
-    background: #b33a2b;
-  }
-  .a ul li:hover:nth-child(3) a:after{
-    background: #e66a5a;
-  }
-  
-  .a  ul li:hover:nth-child(4) a{
-    background: #e4405f;
-  }
-  .a ul li:hover:nth-child(4) a:before{
-    background: #d81c3f;
-  }
-  .a ul li:hover:nth-child(4) a:after{
-    background: #e46880;
-  } */
-
-
-
-
-
-
-
-
-  
+ 
