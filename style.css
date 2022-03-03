@@ -207,9 +207,10 @@ section .title::after{
 }
 .about .about-content .left img{
     height: 400px;
-    width: 400px;
-    object-fit: cover;
+    width: 370px;
+    object-fit:cover;
     border-radius: 50%;
+    
 }
 .about .about-content .right{
     width: 55%;
