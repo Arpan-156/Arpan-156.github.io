@@ -624,13 +624,12 @@ body {
 .skill-bars .bar .progress-line {
   height: 10px;
   width: 100%;
-  background: #f0f0f0;
   position: relative;
   transform: scaleX(0);
   transform-origin: left;
   border-radius: 10px;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05), 0 1px rgba(255, 255, 255, 0.8);
-  animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+  animation: animate 5s cubic-bezier(1, 0, 0.5, 1) forwards;
 }
 
 @keyframes animate {
@@ -819,6 +818,7 @@ body {
 }
 
 /* contact section styling */
+
 .contact .title::after{
     content: "get in touch";
 }
@@ -892,35 +892,153 @@ body {
   padding-top: 10px;
   resize: none;
 }
-.contact .right form .button-area{
+.contact .right form .button{
   display: flex;
   align-items: center;
 }
-.right form .button-area button{
-  color: #fff;
-  display: block;
-  width: 160px!important;
-  height: 45px;
-  outline: none;
-  font-size: 18px;
-  font-weight: 500;
-  border-radius: 6px;
-  cursor: pointer;
-  flex-wrap: nowrap;
-  background: crimson;
-  border: 2px solid crimson;
-  transition: all 0.3s ease;
-}
-.right form .button-area button:hover{
+.right form .button button:hover{
   color: crimson;
   background: none;
 }
+/*BUTTON ANIMATION*/
+.hide {
+  display: none;
+}
+
+.button{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 12.5rem;
+  magrin: 0;
+  padding: 1.5rem 3.125rem;
+  background-color: crimson;
+  border: none;
+  border-radius: 0.3125rem;
+  box-shadow: 0 12px 24px 0 rgba(0, 0, 0, 0.2);
+  color: white;
+  font-weight: 300;
+  text-transform: uppercase;
+  overflow: hidden;
+}
+.button:before {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  /* background-color: #54d98c; */
+}
+.button span {
+  position: absolute;
+  line-height: 0;
+}
+.button span i {
+  transform-origin: center center;
+}
+.button span:nth-of-type(1) {
+  top: 50%;
+  transform: translateY(-50%);
+}
+.button span:nth-of-type(2) {
+  top: 100%;
+  transform: translateY(0%);
+  font-size: 24px;
+}
+.button span:nth-of-type(3) {
+  display: none;
+}
+
+.active {
+  background-color: #2ecc71;
+}
+.active:before {
+  width: 100%;
+  transition: width 3s linear;
+}
+.active span:nth-of-type(1) {
+  top: -100%;
+  transform: translateY(-50%);
+}
+.active span:nth-of-type(2) {
+  top: 50%;
+  transform: translateY(-50%);
+}
+.active span:nth-of-type(2) i {
+  animation: loading 500ms linear infinite;
+}
+.active span:nth-of-type(3) {
+  display: none;
+}
+
+.finished {
+  background-color: crimson;
+}
+.finished .submit {
+  display: none;
+}
+.finished .loading {
+  display: none;
+}
+.finished .check {
+  display: block !important;
+  font-size: 24px;
+  animation: scale 0.5s linear;
+}
+.finished .check i {
+  transform-origin: center center;
+}
+
+@keyframes loading {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes scale {
+  0% {
+    transform: scale(10);
+  }
+  50% {
+    transform: scale(0.2);
+  }
+  70% {
+    transform: scale(1.2);
+  }
+  90% {
+    transform: scale(0.7);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
    
 input[type=text]:focus, textarea:focus {
     box-shadow: 0 0 5px crimson;
     padding: 3px 0px 3px 3px;
     margin: 5px 1px 3px 0px;
     border: 1px solid crimson;
+}
+ /*map*/
+ .mapouter {
+  position: relative;
+  text-align: right;
+  width: 80%;
+  height: 400px;
+}
+
+.gmap_canvas {
+  overflow: hidden;
+  background: none !important;
+  width: 100%;
+  height: 400px;
+}
+
+.gmap_iframe {
+  height: 400px !important;
 }
 
 
@@ -1093,6 +1211,8 @@ footer span a:hover{
 
 
 
+  
+  
 
 
 

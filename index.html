@@ -52,6 +52,7 @@
             </div>
         </div>
     </section>
+    
 
 
 
@@ -345,7 +346,7 @@
     </section>
 
     <!-- contact section start -->
-    <section class="contact" id="contact">
+    <section class="contact" id="contact" >
         <div class="max-width">
             <h2 class="title">Contact me</h2><br>
             <div class="contact-content">
@@ -371,25 +372,6 @@
                                     scrolling="no" marginheight="0" marginwidth="0"
                                     src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=burdwan&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe><a
                                     href="https://kokagames.com/"></a></div>
-                            <style>
-                                .mapouter {
-                                    position: relative;
-                                    text-align: right;
-                                    width: 100%;
-                                    height: 400px;
-                                }
-
-                                .gmap_canvas {
-                                    overflow: hidden;
-                                    background: none !important;
-                                    width: 100%;
-                                    height: 400px;
-                                }
-
-                                .gmap_iframe {
-                                    height: 400px !important;
-                                }
-                            </style>
                         </div>
                         <div class="row">
                             <i class="fas fa-envelope"></i>
@@ -402,7 +384,7 @@
                 </div>
                 <div class="column right">
                     <div class="text">Message me</div>
-                    <form action="#">
+                    <form  onsubmit="sentEmail() ; reset() ">
                         <div class="fields">
                             <div class="field name">
                                 <input type="text" placeholder="Name" required>
@@ -417,9 +399,16 @@
                         <div class="field textarea">
                             <textarea cols="30" rows="10" placeholder="Message.." required></textarea>
                         </div>
-                        <div class="button-area">
-                            <button type="submit">Send message</button>
-                        </div>
+                        <button class="button">
+                            <span class="submit">Send Messege</span>
+                            <span class="loading"><i class="fa fa-refresh"></i></span>
+                            <span class="check"><i class="fa fa-check"></i></span>
+                        </button>
+                        <!-- <div class="button-area">
+                            <span class="submit">Submit</span>
+                            <span class="loading"><i class="fa fa-refresh"></i></span>
+                            <span class="check"><i class="fa fa-check"></i></span>
+                        </div> -->
                     </form>
                 </div>
             </div>
@@ -432,7 +421,22 @@
     </footer>
 
     <script src="script.js"></script>
-
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+<script>
+    function sentEmail(){
+        Email.send({
+    Host : "smtp.gmail.com",
+    Username : "",
+    Password : "",
+    To : '',
+    From : document.getElementById("email").value,
+    Subject : "New Contact from enquuiry",
+    Body : "And this is the body"
+}).then(
+  message => alert("Sent")
+);
+    }
+</script>
 </body>
 
 </html>
